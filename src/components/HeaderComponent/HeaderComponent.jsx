@@ -6,7 +6,7 @@ import { WrapperHeaderAccount } from './style';
 import { WrapperIconHeader } from './style';
 import { TextHeader } from './style';
 import { WrapperCartHeader } from './style';
-
+import ButtonInputSearch from '../ButtonInputSearch/ButtonInputSearch'
 import { AudioOutlined } from '@ant-design/icons';
 import { Input, Space } from 'antd';
 import {
@@ -23,7 +23,7 @@ const suffix = (
     }}
   />
 );
-const onSearch = (value, _e, info) => console.log(info?.source, value);
+
 const HeaderComponent = () => {
   return (
     <div>
@@ -34,12 +34,11 @@ const HeaderComponent = () => {
           </WrapperTextHeader>
         </Col>
         <Col span={12}>
-          <Search
-            placeholder="Tìm sản phẩm,danh mục hay thương hiệu bạn mong muốn"
-            allowClear
-            enterButton="Tìm kiếm"
+          <ButtonInputSearch
             size="large"
-            onSearch={onSearch}
+            textButton = "Tìm kiếm"
+            placeholder="Tìm sản phẩm,danh mục hay thương hiệu bạn mong muốn"
+            
           />
 
         </Col>

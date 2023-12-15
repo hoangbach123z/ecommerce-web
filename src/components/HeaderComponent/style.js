@@ -34,3 +34,7 @@ margin-left:40px;
 gap: 12px;
 
 `
+// export const WrapperSearchHeader =  styled.div `
+// display: flex;
+
+// `
