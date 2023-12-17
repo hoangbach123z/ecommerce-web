@@ -1,12 +1,16 @@
+import { Input } from 'antd'
 import React from 'react'
-import { Input } from 'antd';
-const InputComponent = ({size,bordered, placeholder, style ,...rests}) => {
-    return (
-        <Input size={size}
-            bordered={bordered}
-            placeholder={placeholder}
-            style={style} />
-    )
+
+const InputComponent = ({size, placeholder, bordered, style, ...rests }) => {
+  return (
+    <Input 
+        size={size} 
+        placeholder={placeholder} 
+        bordered={bordered} 
+        style={style}
+        {...rests} 
+    />
+  )
 }
 
 export default InputComponent
