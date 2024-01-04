@@ -1,5 +1,5 @@
 import { Button, Form, Select, Space } from 'antd'
-import { PlusOutlined, DeleteOutlined, EditOutlined, SearchOutlined } from '@ant-design/icons'
+import { PlusOutlined, DeleteTwoTone, EditFilled, SearchOutlined } from '@ant-design/icons'
 import React, { useRef } from 'react'
 import { WrapperHeader, WrapperUploadFile } from './style'
 import TableComponent from '../TableComponent/TableComponent'
@@ -164,8 +164,8 @@ const AdminProduct = () => {
   const renderAction = () => {
     return (
       <div>
-        <DeleteOutlined style={{ color: 'red', fontSize: '30px', cursor: 'pointer' }} onClick={() => setIsModalOpenDelete(true)} />
-        <EditOutlined style={{ color: 'orange', fontSize: '30px', cursor: 'pointer' }} onClick={handleDetailsProduct} />
+        <DeleteTwoTone style={{ color: 'blue', fontSize: '30px', cursor: 'pointer' }} onClick={() => setIsModalOpenDelete(true)} />
+        <EditFilled style={{ color: 'black', fontSize: '30px', cursor: 'pointer' }} onClick={handleDetailsProduct} />
       </div>
     )
   }
@@ -257,13 +257,13 @@ const AdminProduct = () => {
 
   const columns = [
     {
-      title: 'Name',
+      title: 'Tên',
       dataIndex: 'name',
       sorter: (a, b) => a.name.length - b.name.length,
       ...getColumnSearchProps('name')
     },
     {
-      title: 'Price',
+      title: 'Giá',
       dataIndex: 'price',
       sorter: (a, b) => a.price - b.price,
       filters: [
@@ -284,7 +284,7 @@ const AdminProduct = () => {
       },
     },
     {
-      title: 'Rating',
+      title: 'Đánh giá',
       dataIndex: 'rating',
       sorter: (a, b) => a.rating - b.rating,
       filters: [
@@ -305,11 +305,11 @@ const AdminProduct = () => {
       },
     },
     {
-      title: 'Type',
+      title: 'Loại',
       dataIndex: 'type',
     },
     {
-      title: 'Action',
+      title: 'Hành động',
       dataIndex: 'action',
       render: renderAction
     },

@@ -105,43 +105,43 @@ const OrderAdmin = () => {
 
   const columns = [
     {
-      title: 'User name',
+      title: 'Tên người dùng',
       dataIndex: 'userName',
       sorter: (a, b) => a.userName.length - b.userName.length,
       ...getColumnSearchProps('userName')
     },
     {
-      title: 'Phone',
+      title: 'Số điện thoại',
       dataIndex: 'phone',
       sorter: (a, b) => a.phone.length - b.phone.length,
       ...getColumnSearchProps('phone')
     },
     {
-      title: 'Address',
+      title: 'Địa chỉ',
       dataIndex: 'address',
       sorter: (a, b) => a.address.length - b.address.length,
       ...getColumnSearchProps('address')
     },
     {
-      title: 'Paided',
+      title: 'Đã thanh toán',
       dataIndex: 'isPaid',
       sorter: (a, b) => a.isPaid.length - b.isPaid.length,
       ...getColumnSearchProps('isPaid')
     },
     {
-      title: 'Shipped',
+      title: 'Đã vận chuyển',
       dataIndex: 'isDelivered',
       sorter: (a, b) => a.isDelivered.length - b.isDelivered.length,
       ...getColumnSearchProps('isDelivered')
     },
     {
-      title: 'Payment method',
+      title: 'Phương thức thanh toán',
       dataIndex: 'paymentMethod',
       sorter: (a, b) => a.paymentMethod.length - b.paymentMethod.length,
       ...getColumnSearchProps('paymentMethod')
     },
     {
-      title: 'Total price',
+      title: 'Tổng giá trị',
       dataIndex: 'totalPrice',
       sorter: (a, b) => a.totalPrice.length - b.totalPrice.length,
       ...getColumnSearchProps('totalPrice')

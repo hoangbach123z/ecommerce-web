@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -36,7 +36,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app", 
+      "react-app",
       "react-app/jest"
     ]
   },
@@ -52,5 +52,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001/"
+  "proxy": "http://localhost:3001"
 }

@@ -15,7 +15,7 @@ import { useRef } from 'react'
 import { useMutationHooks } from '../../hooks/useMutationHook'
 import * as UserService from '../../services/UserService'
 import { useIsFetching, useQuery, useQueryClient } from '@tanstack/react-query'
-import { DeleteOutlined, EditOutlined, SearchOutlined } from '@ant-design/icons'
+import { DeleteTwoTone, EditFilled, SearchOutlined } from '@ant-design/icons'
 
 const AdminUser = () => {
   const [rowSelected, setRowSelected] = useState('')
@@ -119,8 +119,8 @@ const AdminUser = () => {
   const renderAction = () => {
     return (
       <div>
-        <DeleteOutlined style={{ color: 'red', fontSize: '30px', cursor: 'pointer' }} onClick={() => setIsModalOpenDelete(true)} />
-        <EditOutlined style={{ color: 'orange', fontSize: '30px', cursor: 'pointer' }} onClick={handleDetailsProduct} />
+        <DeleteTwoTone style={{ color: 'blue', fontSize: '30px', cursor: 'pointer' }} onClick={() => setIsModalOpenDelete(true)} />
+        <EditFilled style={{ color: 'Black', fontSize: '30px', cursor: 'pointer' }} onClick={handleDetailsProduct} />
       </div>
     )
   }
@@ -210,7 +210,7 @@ const AdminUser = () => {
 
   const columns = [
     {
-      title: 'Name',
+      title: 'Tên',
       dataIndex: 'name',
       sorter: (a, b) => a.name.length - b.name.length,
       ...getColumnSearchProps('name')
@@ -222,7 +222,7 @@ const AdminUser = () => {
       ...getColumnSearchProps('email')
     },
     {
-      title: 'Address',
+      title: 'Địa chỉ',
       dataIndex: 'address',
       sorter: (a, b) => a.address.length - b.address.length,
       ...getColumnSearchProps('address')
@@ -242,13 +242,13 @@ const AdminUser = () => {
       ],
     },
     {
-      title: 'Phone',
+      title: 'Số điện thoại',
       dataIndex: 'phone',
       sorter: (a, b) => a.phone - b.phone,
       ...getColumnSearchProps('phone')
     },
     {
-      title: 'Action',
+      title: 'Hành động',
       dataIndex: 'action',
       render: renderAction
     },
@@ -357,7 +357,7 @@ const AdminUser = () => {
             <Form.Item
               label="Name"
               name="name"
-              rules={[{ required: true, message: 'Please input your name!' }]}
+              rules={[{ required: true, message: 'Nhập tên của bạn!' }]}
             >
               <InputComponent value={stateUserDetails['name']} onChange={handleOnchangeDetails} name="name" />
             </Form.Item>
@@ -365,14 +365,14 @@ const AdminUser = () => {
             <Form.Item
               label="Email"
               name="email"
-              rules={[{ required: true, message: 'Please input your email!' }]}
+              rules={[{ required: true, message: 'Nhập email của bạn!' }]}
             >
               <InputComponent value={stateUserDetails['email']} onChange={handleOnchangeDetails} name="email" />
             </Form.Item>
             <Form.Item
               label="Phone"
               name="phone"
-              rules={[{ required: true, message: 'Please input your  phone!' }]}
+              rules={[{ required: true, message: 'Nhập số điện thoại của bạn!' }]}
             >
               <InputComponent value={stateUserDetails.phone} onChange={handleOnchangeDetails} name="phone" />
             </Form.Item>
@@ -380,7 +380,7 @@ const AdminUser = () => {
             <Form.Item
               label="Adress"
               name="address"
-              rules={[{ required: true, message: 'Please input your  address!' }]}
+              rules={[{ required: true, message: 'Nhập địa chỉ của bạn!' }]}
             >
               <InputComponent value={stateUserDetails.address} onChange={handleOnchangeDetails} name="address" />
             </Form.Item>
@@ -388,7 +388,7 @@ const AdminUser = () => {
             <Form.Item
               label="Avatar"
               name="avatar"
-              rules={[{ required: true, message: 'Please input your image!' }]}
+              rules={[{ required: true, message: 'Nhập ảnh đại diện của bạn!' }]}
             >
               <WrapperUploadFile onChange={handleOnchangeAvatarDetails} maxCount={1}>
                 <Button >Select File</Button>

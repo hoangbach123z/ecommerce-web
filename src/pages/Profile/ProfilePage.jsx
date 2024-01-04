@@ -84,7 +84,7 @@ const ProfilePage = () => {
             <Loading isLoading={isLoading}>
                 <WrapperContentProfile>
                     <WrapperInput>
-                        <WrapperLabel htmlFor="name">Name</WrapperLabel>
+                        <WrapperLabel htmlFor="name">Tên</WrapperLabel>
                         <InputForm style={{ width: '300px' }} id="name" value={name} onChange={handleOnchangeName} />
                         <ButtonComponent
                             onClick={handleUpdate}
@@ -116,7 +116,7 @@ const ProfilePage = () => {
                         ></ButtonComponent>
                     </WrapperInput>
                     <WrapperInput>
-                        <WrapperLabel htmlFor="phone">Phone</WrapperLabel>
+                        <WrapperLabel htmlFor="phone">Số điện thoại</WrapperLabel>
                         <InputForm style={{ width: '300px' }} id="email" value={phone} onChange={handleOnchangePhone} />
                         <ButtonComponent
                             onClick={handleUpdate}
@@ -132,7 +132,7 @@ const ProfilePage = () => {
                         ></ButtonComponent>
                     </WrapperInput>
                     <WrapperInput>
-                        <WrapperLabel htmlFor="avatar">Avatar</WrapperLabel>
+                        <WrapperLabel htmlFor="avatar">Ảnh đại diện</WrapperLabel>
                         <WrapperUploadFile onChange={handleOnchangeAvatar} maxCount={1}>
                             <Button icon={<UploadOutlined />}>Select File</Button>
                         </WrapperUploadFile>
@@ -159,7 +159,7 @@ const ProfilePage = () => {
                         ></ButtonComponent>
                     </WrapperInput>
                     <WrapperInput>
-                        <WrapperLabel htmlFor="address">Address</WrapperLabel>
+                        <WrapperLabel htmlFor="address">Địa chỉ</WrapperLabel>
                         <InputForm style={{ width: '300px' }} id="address" value={address} onChange={handleOnchangeAddress} />
                         <ButtonComponent
                             onClick={handleUpdate}

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent'
 import InputForm from '../../components/InputForm/InputForm'
 import { WrapperContainerLeft, WrapperContainerRight, WrapperTextLight } from './style'
-import imageLogo from '../../assets/images/logo-login.png'
+import imageLogo from '../../assets/images/Logo_HAU.png'
 import { Image } from 'antd'
 import { EyeFilled, EyeInvisibleFilled } from '@ant-design/icons'
 import { useState } from 'react'
@@ -129,7 +129,7 @@ const SignInPage = () => {
         </WrapperContainerLeft>
         <WrapperContainerRight>
           <Image src={imageLogo} preview={false} alt="iamge-logo" height="203px" width="203px" />
-          <h4>Mua sắm tại LTTD</h4>
+          <h4>Mua sắm tại Smart Tech</h4>
         </WrapperContainerRight>
       </div>
     </div >
