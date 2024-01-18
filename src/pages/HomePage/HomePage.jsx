@@ -1,11 +1,7 @@
 import React from 'react';
 import SliderComponent from '../../components/SliderComponent/SliderComponent';
 import TypeProduct from '../../components/TypeProduct/TypeProduct';
-import {
-    WrapperButtonMore,
-    WrapperProducts,
-    WrapperTypeProduct,
-} from './style';
+import { WrapperProducts, WrapperTypeProduct } from './style';
 import slider1 from '../../assets/images/slider1.webp';
 import slider2 from '../../assets/images/slider2.webp';
 import slider3 from '../../assets/images/slider3.webp';
@@ -114,7 +110,7 @@ const HomePage = () => {
                                 width: '100%',
                                 textAlign: 'center',
                             }}>
-                            Chưa có blog nào thuộc danh mục này
+                            Chưa có sản phẩm nào được bày bán
                         </div>
                     )}
                     <div
@@ -125,15 +121,6 @@ const HomePage = () => {
                             justifyContent: 'center',
                             marginTop: '10px',
                         }}>
-                        {/* <WrapperButtonMore
-              textbutton={isPreviousData ? 'Xem thêm' : "Xem thêm"} type="outline" styleButton={{
-                border: `1px solid ${products?.total === products?.data?.length ? '#f5f5f5' : 'rgb(10, 104, 255)'}`, color: `${products?.total === products?.data?.length ? '#f5f5f5' : 'rgb(10, 104, 255)'}`,
-                width: '240px', height: '38px', borderRadius: '4px'
-              }}
-              disabled={products?.total === products?.data?.length || products?.totalPage === 1}
-              styleTextButton={{ fontWeight: 500, color: products?.total === products?.data?.length && '#fff' }}
-              onClick={() => setLimit((prev) => prev + 6)}
-            /> */}
                         <Pagination
                             total={products?.data?.length}
                             perPage={limit}
